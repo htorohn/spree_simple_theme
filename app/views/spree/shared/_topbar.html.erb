@@ -1,0 +1,29 @@
+<!-- *** TOPBAR ***
+_________________________________________________________ -->
+<div id="top">
+    <div class="container">
+        <div class="col-md-5 offer" data-animate="fadeInDown">
+            <a href="#" class="btn btn-success btn-sm" data-animate-hover="shake">Offer of the day</a>  <a href="#">Get flat 35% off on orders over $50!</a>
+        </div>
+        <div class="col-md-7" data-animate="fadeInDown">
+            <ul class="menu">
+                <!--<li>-->
+                    <%= render partial: 'spree/shared/link_to_cart' %>
+                <!--</li>-->
+                <li>
+                    <!--<a href="#" data-toggle="modal" data-target="#login-modal">Login</a>-->
+                    <%= render partial: 'spree/shared/link_to_account' %>
+                </li>
+                <% if !spree_current_user %>
+                    <li>
+                        <%= link_to Spree.t(:register), spree.signup_path %>
+                    </li>
+                <% end %>
+            </ul>
+            
+        </div>
+    </div>
+
+</div>
+
+    <!-- *** TOP BAR END *** -->
