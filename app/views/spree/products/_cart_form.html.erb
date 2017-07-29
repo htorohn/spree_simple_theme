@@ -41,14 +41,14 @@
         </div>
 
         <% if @product.can_supply? %>
-          <div class="add-to-cart col-md-6 col-md-offset-3">
+          <div class="add-to-cart col-md-4 col-md-offset-4">
             <br />
             <div class="input-group">
               <%= number_field_tag :quantity, 1, class: 'title form-control', min: 1 %>
               <span class="input-group-btn">
                 <%= button_tag class: 'btn btn-primary', id: 'add-to-cart-button', type: :submit do %>
                   <%= content_tag :i, '', class: 'fa fa-shopping-cart' %>
-                  <%= Spree.t(:add_to_cart) %>
+                  <%#= Spree.t(:add_to_cart) %>
                 <% end %>
               </span>
             </div>
