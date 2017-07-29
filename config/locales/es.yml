@@ -1,0 +1,3 @@
+es:
+    spree:
+        order_number_theme: Orden %{number}
