@@ -83,24 +83,44 @@
 
                     <div class="col-md-3 col-sm-6">
 
-                        <h4>Get the news</h4>
+                        
+                        
+                        <div id="locales">
+                            <% if SpreeI18n::Config.available_locales.many? %>
+                              <!--<li id="locale-select" data-hook>-->
+                              <h4>Idioma</h4>
+                              
+                                <%= form_tag spree.set_locale_path, class: '' do %>
+                                  <div class="form-group">
+                                    <label for="switch_to_locale" class="sr-only">
+                                      <%= Spree.t(:'i18n.language') %>
+                                    </label>
+                                    <%= select_tag(:switch_to_locale,
+                                      options_for_select(available_locales_options, I18n.locale),
+                                      class: 'form-control') %>
+                                    <noscript><%= submit_tag %></noscript>
+                                  </div>
+                                <% end %>
+                              <!--</li>-->
+                            <% end %>
+                        </div>
 
-                        <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                       <!-- <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>-->
+        
+                       <!-- <form>-->
+                       <!--     <div class="input-group">-->
 
-                        <form>
-                            <div class="input-group">
+                       <!--         <input type="text" class="form-control">-->
 
-                                <input type="text" class="form-control">
+                       <!--         <span class="input-group-btn">-->
 
-                                <span class="input-group-btn">
+			                    <!--    <button class="btn btn-default" type="button">Subscribe!</button>-->
 
-			    <button class="btn btn-default" type="button">Subscribe!</button>
+			                    <!--</span>-->
 
-			</span>
-
-                            </div>
+                       <!--     </div>-->
                             <!-- /input-group -->
-                        </form>
+                       <!-- </form>-->
 
                         <hr>
 
