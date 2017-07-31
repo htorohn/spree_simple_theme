@@ -1,3 +1,5 @@
 es:
     spree:
         order_number_theme: Orden %{number}
+        login_theme: Ingresar
+        register_theme: Registrarse

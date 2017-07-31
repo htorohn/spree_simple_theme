@@ -5,3 +5,5 @@ en:
   hello: "Hello world"
   spree:
     order_number_theme: Order %{number}
+    login_theme: Login
+    register_theme: Register
