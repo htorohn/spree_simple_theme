@@ -4,22 +4,22 @@ module Spree::FrontendHelper
       return '' if max_level < 1 || root_taxon.leaf?
 
         content_tag :div, class: 'list-group' do
-        taxons = root_taxon.children.map do |taxon|
-          css_class = (current_taxon && current_taxon.self_and_ancestors.include?(taxon)) ? 'list-group-item active' : 'list-group-item'
-          link_to(taxon.name, seo_url(taxon), class: css_class) + taxons_tree(taxon, current_taxon, max_level - 1)
+          taxons = root_taxon.children.map do |taxon|
+            css_class = (current_taxon && current_taxon.self_and_ancestors.include?(taxon)) ? 'list-group-item active' : 'list-group-item'
+            link_to(taxon.name, seo_url(taxon), class: css_class) + taxons_tree(taxon, current_taxon, max_level - 1)
+          end
+          safe_join(taxons, "\n")
         end
-        safe_join(taxons, "\n")
-      end
 
     end
     
     
     
     
-    def checkout_progress(numbers: false)
+    def checkout_progress_theme(numbers: false)
       states = @order.checkout_steps
       items = states.each_with_index.map do |state, i|
-        text = Spree.t("order_states.#{state}").titleize
+        text = Spree.t("order_state.#{state}").titleize
         text.prepend("#{i.succ}. ") if numbers
 
         css_classes = []

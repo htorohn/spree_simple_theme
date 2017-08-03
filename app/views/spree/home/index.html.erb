@@ -17,7 +17,7 @@
   <div class="box">
       <div class="container">
           <div class="col-md-12">
-              <h2>Conoce nuestros productos</h2>
+              <h2>Conoce nuestros últimos productos</h2>
           </div>
       </div>
   </div>
@@ -26,7 +26,7 @@
   <div class="container">
     <div data-hook="homepage_products">
       <% cache(cache_key_for_products) do %>
-        <%= render partial: 'spree/shared/products', locals: { products: @products } %>
+        <%= render partial: 'spree/shared/latest_products', locals: { products: @latest_products } %>
       <% end %>
     </div>
   </div>

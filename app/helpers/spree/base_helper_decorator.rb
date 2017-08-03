@@ -2,14 +2,14 @@ module Spree::BaseHelper
    
     
     def layout_partial
-    if devise_controller?
-      #@taxonomies = Spree::Taxonomy.includes(root: :children)
-      'spree/base/devise'
-    else
-      @taxonomies = Spree::Taxonomy.includes(root: :children)
-      'spree/base/application'
-    end
-  end
+        if devise_controller?
+          #@taxonomies = Spree::Taxonomy.includes(root: :children)
+          'spree/base/devise'
+        else
+          @taxonomies = Spree::Taxonomy.includes(root: :children)
+          'spree/base/application'
+        end
+      end
     
     
     def logo(image_path = Spree::Config[:logo], a_options: {}, img_options: {})
