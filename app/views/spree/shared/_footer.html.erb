@@ -4,22 +4,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
-                        <h4>Pages</h4>
+                        <h4>Páginas</h4>
 
                         <ul>
-                            <li><a href="text.html">About us</a>
-                            </li>
-                            <li><a href="text.html">Terms and conditions</a>
-                            </li>
-                            <li><a href="faq.html">FAQ</a>
-                            </li>
-                            <li><a href="contact.html">Contact us</a>
-                            </li>
+                            <!--<li><a href="text.html">About us</a>-->
+                            <!--</li>-->
+                            <!--<li><a href="text.html">Terms and conditions</a>-->
+                            <!--</li>-->
+                            <!--<li><a href="faq.html">FAQ</a>-->
+                            <!--</li>-->
+                            <!--<li><a href="contact.html">Contact us</a>-->
+                            <!--</li>-->
+                            <%= render partial: 'spree/static_content/static_content_list', collection: Spree::Page.by_store(current_store).visible.header_links, as: :page %>
                         </ul>
 
                         <hr>
 
-                        <h4>User section</h4>
+                        <h4>Usuarios</h4>
 
                         <ul>
                             <li>
@@ -61,18 +62,18 @@
 
                     <div class="col-md-3 col-sm-6">
 
-                        <h4>Where to find us</h4>
+                        <h4>Dirección</h4>
 
-                        <p><strong>Obaju Ltd.</strong>
-                            <br>13/25 New Avenue
-                            <br>New Heaven
-                            <br>45Y 73J
-                            <br>England
+                        <p><strong>Dinamic Solutions.</strong>
+                            <br>Edificio Plaza Morazan
+                            <br>Torre 1, Piso 12
+                            <br>Tegucigalpa
                             <br>
-                            <strong>Great Britain</strong>
+                            <!--<br>-->
+                            <strong>Honduras</strong>
                         </p>
 
-                        <a href="contact.html">Go to contact page</a>
+                        <!--<a href="contact.html">Go to contact page</a>-->
 
                         <hr class="hidden-md hidden-lg">
 
