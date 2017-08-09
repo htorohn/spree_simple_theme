@@ -5,6 +5,6 @@ the installer will append this file to the app vendored assets here: 'vendor/ass
 *= require_tree .
 *= require_self
 
-
+*= require font-awesome
 
 */
