@@ -7,3 +7,4 @@ en:
     order_number_theme: Order %{number}
     login_theme: Login
     register_theme: Register
+    product_scroll: Scroll to product details, material & care and sizing
