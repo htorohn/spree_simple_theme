@@ -3,18 +3,10 @@
         <div id="footer" data-animate="fadeInUp">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-md-4 col-sm-8">
                         <h4>Páginas</h4>
 
                         <ul>
-                            <!--<li><a href="text.html">About us</a>-->
-                            <!--</li>-->
-                            <!--<li><a href="text.html">Terms and conditions</a>-->
-                            <!--</li>-->
-                            <!--<li><a href="faq.html">FAQ</a>-->
-                            <!--</li>-->
-                            <!--<li><a href="contact.html">Contact us</a>-->
-                            <!--</li>-->
                             <%= render partial: 'spree/static_content/static_content_list', collection: Spree::Page.by_store(current_store).visible.header_links, as: :page %>
                         </ul>
 
@@ -39,28 +31,28 @@
                     </div>
                     <!-- /.col-md-3 -->
 
-                    <div class="col-md-3 col-sm-6">
+                    <!-- <div class="col-md-3 col-sm-6"> -->
 
                         <!--<h4>Top categories</h4>-->
                             
-                            <% @taxonomies.each do |taxonomy| %>
-                                <h4>
-                                    <%= taxonomy.name %>
-                                </h4>
+                            <%# @taxonomies.each do |taxonomy| %>
+                               <!--  <h4> -->
+                                    <%#= taxonomy.name %>
+                                <!-- </h4> -->
 
-                                <%= footer_tree(taxonomy.root, @taxon, 1) %>
+                                <%#= footer_tree(taxonomy.root, @taxon, 1) %>
 
                               
                               
-                            <% end %>
+                            <%# end %>
 
 
-                        <hr class="hidden-md hidden-lg">
+                        <!-- <hr class="hidden-md hidden-lg">
 
-                    </div>
+                    </div> -->
                     <!-- /.col-md-3 -->
 
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-md-4 col-sm-8">
 
                         <h4>Dirección</h4>
 
@@ -82,7 +74,7 @@
 
 
 
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-md-4 col-sm-8">
 
                         
                         
@@ -110,22 +102,6 @@
                             <% end %>
                         </div>
 
-                       <!-- <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>-->
-        
-                       <!-- <form>-->
-                       <!--     <div class="input-group">-->
-
-                       <!--         <input type="text" class="form-control">-->
-
-                       <!--         <span class="input-group-btn">-->
-
-			                    <!--    <button class="btn btn-default" type="button">Subscribe!</button>-->
-
-			                    <!--</span>-->
-
-                       <!--     </div>-->
-                            <!-- /input-group -->
-                       <!-- </form>-->
 
                         <hr>
 
