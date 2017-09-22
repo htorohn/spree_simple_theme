@@ -15,11 +15,17 @@
       <div id="productMain" data-hook="product_show" class="row same-height-row" itemscope itemtype="https://schema.org/Product">
         <div class="col-sm-5">
           
-          <div class="box same-height" id="product-images" data-hook="product_images">
+          <div id="product-images" class="box same-height" id="product-images" data-hook="product_images">
             <div class="container">
               <div id="main-image" class="mainImage">
-                <%= product_image(@product, itemprop: "image", class: "img-responsive") %>
+                <%#= product_image(@product, id: "product_main_image", itemprop: "image", class: "img-responsive") %>
+                <% image = @product.images.first  %>
+                <%= image_tag(image.attachment.url(:product), id: "zoom_08", class: "img-responsive", 'data-zoom-image' => image.attachment.url(:large)) %>
               </div>
+              
+
+
+
             </div>
             <br>
             <div id="thumbnails" class="thumbnails">
@@ -112,3 +118,29 @@
   <% end %>
 
 </div>
+
+
+<script type="text/javascript">
+                
+                // $("#zoom_08").elevateZoom({
+                //      zoomWindowFadeIn: 500,
+                //      zoomWindowFadeOut: 500,
+                //      lensFadeIn: 500,
+                //      lensFadeOut: 500
+                // });
+
+                $("#zoom_08").elevateZoom({
+                  gallery:'thumbnails',
+                  galleryActiveClass: 'active',
+                  zoomType: "inner",
+                  cursor: "crosshair",                                    
+                  zoomWindowFadeIn: 500,
+                    zoomWindowFadeOut: 500,
+                    lensFadeIn: 500,
+                    lensFadeOut: 500
+                });
+                //pass the images to Fancybox
+                //$("#zoom_08").elevateZoom({scrollZoom : true});
+
+              </script>
+
