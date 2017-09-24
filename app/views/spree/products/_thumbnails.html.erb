@@ -6,7 +6,7 @@
     <% @product.images.each do |i| %>
       <div class="item">
       <li class='tmb-all tmb-<%= i.viewable.id %>'>
-        <%= link_to(image_tag(i.attachment.url(:mini), class: "thumbnail", 'data-zoom-image' => i.attachment.url(:large)), i.attachment.url(:product)) %>
+        <%= link_to(image_tag(i.attachment.url(:mini), class: "thumbnail"), i.attachment.url(:product), 'data-image' => i.attachment.url(:product), 'data-zoom-image' => i.attachment.url(:large)) %>
       </li>
       </div>
     <% end %>
@@ -15,8 +15,8 @@
       <% @product.variant_images.each do |i| %>
         <% next if @product.images.include?(i) %>
         <div class="item">
-        <li class='vtmb tmb-<%= i.viewable.id %>'>
-          <%= link_to(image_tag(i.attachment.url(:mini), class: "thumbnail", 'data-zoom-image' => i.attachment.url(:large)), i.attachment.url(:product)) %>
+        <li class='tmb-all tmb-<%= i.viewable.id %>'>
+          <%= link_to(image_tag(i.attachment.url(:mini), class: "thumbnail"), i.attachment.url(:product), 'data-image' => i.attachment.url(:product), 'data-zoom-image' => i.attachment.url(:large)) %>
         </li>
         </div>
       <% end %>

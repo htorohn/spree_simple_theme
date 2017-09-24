@@ -3,3 +3,12 @@
 
 
 //= require_tree .
+
+function load_js()
+   {
+      var head= document.getElementsByTagName('head')[0];
+      var script= document.createElement('script');
+      script.type= 'text/javascript';
+      script.src= 'source_file.js';
+      head.appendChild(script);
+   }
