@@ -10,8 +10,6 @@ Spree.ready ($) ->
       ($ '#main-image').data 'selectedThumbId', ($ event.currentTarget).parent().attr('id')
       thumbnails.find('li').removeClass 'selected'
       ($ event.currentTarget).parent('li').addClass 'selected'
-
-
       false
 
     thumbnails.find('li').on 'mouseenter', (event) ->
@@ -21,6 +19,7 @@ Spree.ready ($) ->
 
     thumbnails.find('li').on 'mouseleave', (event) ->
       ($ '#main-image img').attr 'src', ($ '#main-image').data('selectedThumb')
+      
 
   Spree.showVariantImages = (variantId) ->
     ($ 'li.vtmb').hide()
