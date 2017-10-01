@@ -8,3 +8,6 @@ en:
     login_theme: Login
     register_theme: Register
     product_scroll: Scroll to product details, material & care and sizing
+    terms_message1: By clicking on
+    terms_message2: you accept our 
+    terms_conditions: Terms and Conditions

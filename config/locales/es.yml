@@ -4,6 +4,9 @@ es:
         login_theme: Ingresar
         register_theme: Registrarse
         product_scroll: Ver los detalles del producto
+        terms_message1: Al hacer click en
+        terms_message2: acepta nuestros 
+        terms_conditions: Terminos y Condiciones
         order_state:
           address: Dirección
           awaiting_return: Esperando devolución

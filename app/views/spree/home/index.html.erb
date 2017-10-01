@@ -33,22 +33,22 @@
 
 
 
-  <%# if @best_sellers != nil then %>
-    <!-- <div class="box">
+  <% if @best_sellers != nil then %>
+    <div class="box">
         <div class="container">
             <div class="col-md-12">
                 <h2>Lo más vendido</h2>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
-    <!-- <div class="container">
-      <div data-hook ="homepage_products"> -->
-        <%# cache(cache_key_for_products) do %>
-          <%#= render partial: 'spree/shared/slider_products', locals: { products: @best_sellers } %>
-        <%# end %>
-      <!-- </div>
-    </div> -->
-  <%# end %>
+    <div class="container">
+      <div data-hook ="homepage_products">
+        <% cache(cache_key_for_products) do %>
+          <%= render partial: 'spree/shared/slider_products', locals: { products: @best_sellers } %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
 </div>

@@ -59,10 +59,10 @@
                             <div class="col-md-12">
                                 <div class="pull-right">
                                 <p>
-                                    Al hacer click en <strong>"<%= Spree.t(:checkout) %>"</strong>, acepta nuestros <a href="#" 
+                                    <%= Spree.t(:terms_message1) %> <strong>"<%= Spree.t(:checkout) %>"</strong>, <%= Spree.t(:terms_message2) %> <a href="#" 
                                       target="popup" 
                                       onclick="window.open('/terminos','popup','width=600,height=600'); return false;">
-                                        Términos y condiciones
+                                        <%= Spree.t(:terms_conditions) %>
                                     </a>
                                     
                                 </p>
