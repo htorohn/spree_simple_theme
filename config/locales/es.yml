@@ -7,12 +7,12 @@ es:
         terms_message1: Al hacer click en
         terms_message2: acepta nuestros 
         terms_conditions: Terminos y Condiciones
-        order_state:
+        order_states:
           address: Dirección
           awaiting_return: Esperando devolución
           canceled: cancelada
           cart: Carrito
-          complete: completado
+          complete: Completado
           confirm: Confirmada
           considered_risky: considerado arriesgado
           delivery: Entrega
