@@ -7,7 +7,7 @@ es:
         terms_message1: Al hacer click en
         terms_message2: acepta nuestros 
         terms_conditions: Terminos y Condiciones
-        order_states:
+        order_state:
           address: Dirección
           awaiting_return: Esperando devolución
           canceled: cancelada
