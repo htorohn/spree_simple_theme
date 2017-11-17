@@ -7,7 +7,9 @@
             <div class="panel-heading">
                 <h3 class='panel-title'><%= Spree.t(:shop_by_taxonomy, taxonomy: taxonomy.name) %></h3>
             </div>
-        <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
+            
+              <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
+            
       <% end %>
     <% end %>
   <% end %>
