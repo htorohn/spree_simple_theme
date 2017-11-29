@@ -22,9 +22,6 @@
                 <% image = @product.images.first  %>
                 <%= image_tag(image.attachment.url(:product), id: "zoom_08", class: "img-responsive", 'data-zoom-image' => image.attachment.url(:large)) %>
               </div>
-              
-
-
 
             </div>
             <br>
@@ -54,35 +51,16 @@
             <div id="cart-form" data-hook="cart_form">
               <%= render partial: 'cart_form' %>
             </div>
-            
+            <br>
+            <div class="col-sm-12 text-center">
+              <%= social_share_button_tag(@product.name, desc: @product.name) %>
+            </div>
+            <br>
+
           </div>
             
         </div> 
           
-         
-         
-        
-          <!--<div data-hook="product_left_part_wrap">-->
-          <!--  <div id="product-images" data-hook="product_images">-->
-          <!--    <div id="main-image" class="panel panel-default" data-hook>-->
-                
-          <!--    </div>-->
-          <!--    <div id="thumbnails" data-hook>-->
-               
-            <!--  </div>-->
-            <!--</div>-->
-    
-            <!--<div data-hook="product_properties">-->
-              <%#= render partial: 'properties' %>
-            <!--</div>-->
-    
-            <!--<div data-hook="promotions">-->
-              <%#= render partial: 'promotions' %>
-          <!--  </div>-->
-          <!--</div>-->
-        
-    
-        
       </div>
       
       <div class="row">
