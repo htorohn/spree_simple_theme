@@ -53,7 +53,7 @@
             </div>
             <br>
             <div class="col-sm-12 text-center">
-              <%= social_share_button_tag(@product.name, desc: @product.name) %>
+              <%= social_share_button_tag(@product.name, :image => image.attachment.url(:product), desc: @product.name) %>
             </div>
             <br>
 
