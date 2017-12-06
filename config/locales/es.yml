@@ -19,3 +19,32 @@ es:
           payment: Pago
           resumed: reanudado
           returned: devuelto
+        api:
+            must_specify_api_key: Debe especificar un API key.
+            invalid_api_key:  API key (%{key}) inválido.
+            unauthorized: No esta autorizado para realizar esa acción
+            invalid_resource: Recurso inválido. Porfavor corrige los errores y prueba nuevamente.
+            resource_not_found: El recurso que buscas no pudo ser encontrado.
+            gateway_error: Hubo un problema con el payment gateway`:` %{text}
+            access: Acceso API
+            key: Key
+            clear_key: Limpiar key
+            regenerate_key: Volver a generar Key
+            no_key: No key
+            generate_key: Generar API key
+            key_generated: Key generada
+            key_cleared: Key limpiada
+            order:
+                could_not_transition: No se pudo transicionar la orden. Por favor arregla los errores y prueba.
+                invalid_shipping_method: Metodo de envío inválido.
+                insufficient_quantity: Un item en su carrito ya no esta disponible.
+            payment:
+                credit_over_limit: This payment can only be credited up to %{limit}. Please specify an amount less than or equal to this number.
+                update_forbidden: This payment cannot be updated because it is %{state}.
+            shipment:
+                cannot_ready: Cannot ready shipment.
+            stock_location_required: A stock_location_id parameter must be provided in order to retrieve stock movements.
+            invalid_taxonomy_id: Invalid taxonomy id.
+            shipment_transfer_errors_occured: Following errors occured while attempting this action`:`
+            negative_quantity: quantity is negative
+            wrong_shipment_target: target shipment is the same as original shipment
