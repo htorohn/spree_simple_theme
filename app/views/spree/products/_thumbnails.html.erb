@@ -1,12 +1,10 @@
 <%# no need for thumbnails unless there is more than one image %>
 <% if (@product.images + @product.variant_images).uniq.size > 1 %>
-  
-  
   <ul id="product-thumbnails" class="product-slider thumbnails list-inline" data-hook>
     <% @product.images.each do |i| %>
       <div class="item">
       <li class='tmb-all tmb-<%= i.viewable.id %>'>
-        <%= link_to(image_tag(i.attachment.url(:mini), class: "thumbnail"), i.attachment.url(:product), 'data-image' => i.attachment.url(:product), 'data-zoom-image' => i.attachment.url(:large)) %>
+        <%= link_to(image_tag(main_app.url_for(i.url(:mini)), class: "thumbnail"), main_app.url_for(i.url(:product)), 'data-image' => main_app.url_for(i.url(:product)), 'data-zoom-image' => main_app.url_for(i.url(:large))) %>
       </li>
       </div>
     <% end %>
@@ -16,7 +14,7 @@
         <% next if @product.images.include?(i) %>
         <div class="item">
         <li class='tmb-all tmb-<%= i.viewable.id %>'>
-          <%= link_to(image_tag(i.attachment.url(:mini), class: "thumbnail"), i.attachment.url(:product), 'data-image' => i.attachment.url(:product), 'data-zoom-image' => i.attachment.url(:large)) %>
+          <%= link_to(image_tag(main_app.url_for(i.url(:mini)), class: "thumbnail"), main_app.url_for(i.url(:product)), 'data-image' => main_app.url_for(i.url(:product)), 'data-zoom-image' => main_app.url_for(i.url(:large))) %>
         </li>
         </div>
       <% end %>

@@ -20,7 +20,8 @@
               <div id="main-image" class="mainImage">
                 <%#= product_image(@product, id: "product_main_image", itemprop: "image", class: "img-responsive") %>
                 <% image = @product.images.first  %>
-                <%= image_tag(image.attachment.url(:product), id: "zoom_08", class: "img-responsive", 'data-zoom-image' => image.attachment.url(:large)) %>
+                <%#= image_tag(image.attachment.url(:product), id: "zoom_08", class: "img-responsive", 'data-zoom-image' => image.attachment.url(:large)) %>
+                <%= image_tag(main_app.url_for(image.url(:product)), id: "zoom_08", class: "img-responsive", 'data-zoom-image' => main_app.url_for(image.url(:large))) %>
               </div>
 
             </div>
@@ -53,7 +54,7 @@
             </div>
             <br>
             <div class="col-sm-12 text-center">
-              <%= social_share_button_tag(@product.name, :image => spree.root_url.chomp('/') + image.attachment.url(:product), desc: @product.description) %>
+              <%= social_share_button_tag(@product.name, :image => spree.root_url.chomp('/') + main_app.url_for(image.url(:product)), desc: @product.description) %>
             </div>
             <br>
 
